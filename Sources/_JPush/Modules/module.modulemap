@@ -1,0 +1,4 @@
+module _JPush {
+  umbrella header "JPUSHService.h"
+  export *
+}
