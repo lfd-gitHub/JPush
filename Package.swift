@@ -1,21 +1,22 @@
-// swift-tools-version: 5.5
+// swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "JPushSDK",
+    platforms: [.iOS(.v15)],
     products: [.library(name: "JPush", targets: ["JPush"])],
     targets: [
         .binaryTarget(
             name: "_JPushBinary",
-            url: "https://github.com/excellemed/JPush/releases/download/jpush-5.7.0-jcore-5.1.0/jpush-ios-5.7.0.xcframework.zip",
-            checksum: "96666f6c61ffce0e5bfb8f2cb45e2d6706a606becc9fa3f22c10dced30e576f9",
+            url: "https://github.com/lfd-gitHub/JPush/releases/download/jpush-5.7.0-jcore-5.1.0/jpush-ios-5.7.0.xcframework.zip",
+            checksum: "4fbde5fb18e3a5321d936bf2c83e23a7efa1b7f0139c5a8f76c6f375b0874b76"
         ),
         .binaryTarget(
             name: "JCore",
-            url: "https://github.com/excellemed/JPush/releases/download/jpush-5.7.0-jcore-5.1.0/jcore-ios-5.1.0.xcframework.zip",
-            checksum: "9374d07939bb2b8d3ec911318f1b1cb7cd099069482ff9850ef4224458da9fc1",
+            url: "https://github.com/lfd-gitHub/JPush/releases/download/jpush-5.7.0-jcore-5.1.0/jcore-ios-5.1.0.xcframework.zip",
+            checksum: "b3b057d6cbf385173f0e432d8d412823fdc1491da41e983a6c7aa2621a7529e3"
         ),
         .target(
             name: "_JPush",
@@ -45,7 +46,8 @@ let package = Package(
                 .linkedLibrary("z"),
                 .linkedLibrary("resolv"),
                 .linkedLibrary("sqlite3"),
-                .unsafeFlags(["-ObjC"], .when(platforms: [.iOS])),
+                //.unsafeFlags(["-ObjC"], .when(platforms: [.iOS])),
+                .unsafeFlags(["-Xlinker", "-objc"])
             ]
         ),
     ]
