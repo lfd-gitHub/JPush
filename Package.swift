@@ -10,12 +10,12 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "_JPushBinary",
-            url: "https://github.com/lfd-gitHub/JPush/releases/download/jpush-5.7.0-jcore-5.1.0/jpush-ios-5.7.0.xcframework.zip",
+            url: "https://github.com/lfd-gitHub/JPush/releases/download/JPushSDKLib-noidfa-590/jpush-noidfa-ios-5.9.0.xcframework.zip",
             checksum: "4fbde5fb18e3a5321d936bf2c83e23a7efa1b7f0139c5a8f76c6f375b0874b76"
         ),
         .binaryTarget(
             name: "JCore",
-            url: "https://github.com/lfd-gitHub/JPush/releases/download/jpush-5.7.0-jcore-5.1.0/jcore-ios-5.1.0.xcframework.zip",
+            url: "https://github.com/lfd-gitHub/JPush/releases/download/JPushSDKLib-noidfa-590/jcore-noidfa-ios-5.2.2.xcframework.zip",
             checksum: "b3b057d6cbf385173f0e432d8d412823fdc1491da41e983a6c7aa2621a7529e3"
         ),
         .target(
