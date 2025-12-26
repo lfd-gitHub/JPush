@@ -46,8 +46,8 @@ let package = Package(
                 .linkedLibrary("z"),
                 .linkedLibrary("resolv"),
                 .linkedLibrary("sqlite3"),
-                //.unsafeFlags(["-ObjC"], .when(platforms: [.iOS])),
-                .unsafeFlags(["-Xlinker", "-objc"])
+                .unsafeFlags(["-ObjC"], .when(platforms: [.iOS]))
+                //.unsafeFlags(["-Xlinker", "-objc"])
             ]
         ),
     ]
